@@ -1,0 +1,19 @@
+name: Lint HTML and CSS
+
+on:
+  pull_request:
+    branches: [develop]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Lint HTML
+        run: |
+          npx htmlhint "**/*.html" || true
+
+      - name: Lint CSS
+        run: |
+          npx stylelint "**/*.css" || true
