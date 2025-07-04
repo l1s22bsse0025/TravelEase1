@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trip Planner - TravelEase</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="styles/index.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">TravelEase</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+        <li class="nav-item"><a class="nav-link active" href="trip-planner.html">Trip Planner</a></li>
+        <li class="nav-item"><a class="nav-link" href="stories.html">Stories</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<header class="bg-success text-white text-center py-4">
+  <h1>Trip Planning Guide</h1>
+  <p>Plan your adventure to Northern Pakistan with confidence</p>
+</header>
+
+<!-- Main Content -->
+<main class="container my-5">
+  <div class="row mb-4">
+    <div class="col-md-4">
+      <img src="../images/imageone.jpg" class="img-fluid rounded" alt="Transportation">
+      <h4 class="mt-2">How to Travel</h4>
+      <p>Choose between local buses, jeeps, or private tours. For remote areas, 4x4 jeeps and local guides are highly recommended.</p>
+    </div>
+    <div class="col-md-4">
+      <img src="../images/imagetwo.jpg" class="img-fluid rounded" alt="Where to Stay">
+      <h4 class="mt-2">Where to Stay</h4>
+      <p>From budget guesthouses to luxury hotels — Hunza and Skardu offer a variety of options with amazing views.</p>
+    </div>
+    <div class="col-md-4">
+      <img src="../images/imagethree.jpg" class="img-fluid rounded" alt="Packing Essentials">
+      <h4 class="mt-2">Packing Essentials</h4>
+      <p>Warm clothes, power banks, hiking shoes, and basic first-aid are must-haves. Mountains can be cold even in summer.</p>
+    </div>
+  </div>
+
+  <!-- PDFs Section -->
+  <section class="mb-5">
+    <h3>Downloadable Resources</h3>
+    <ul>
+      <li><a href="../docs/basic-urdu-phrases.pdf" target="_blank">🗣️ Basic Urdu Phrases (PDF)</a></li>
+      <li><a href="../docs/packing-checklist.pdf" target="_blank">📦 Packing Checklist (PDF)</a></li>
+      <li><a href="../docs/safety-guide.pdf" target="_blank">🛡️ Safety & Emergency Guide (PDF)</a></li>
+    </ul>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <h3>Frequently Asked Questions</h3>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1">
+            Is Wi-Fi available in remote areas?
+          </button>
+        </h2>
+        <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Wi-Fi is available in most hotels, but coverage is limited in valleys and mountain villages.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">
+            Do I need a guide?
+          </button>
+        </h2>
+        <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">A local guide is not mandatory, but highly recommended for trekking routes and cultural understanding.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <p>&copy; 2025 TravelEase. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
