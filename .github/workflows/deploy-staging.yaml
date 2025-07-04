@@ -1,0 +1,25 @@
+name: Deploy to Staging
+
+on:
+  push:
+    branches: [ release/v1.0 ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Static Files (Optional if needed)
+        run: echo "No build step for static HTML"
+
+      - name: Deploy to GitHub Pages (Staging)
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./src
+          destination_dir: staging
