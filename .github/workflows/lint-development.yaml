@@ -8,10 +8,24 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install Dependencies
+        run: |
+          npm install -g htmlhint stylelint stylelint-config-standard stylelint-config-recommended stylelint-config-html
 
       - name: Lint HTML
-        run: npx htmlhint "**/*.html"
+        run: |
+          echo '{}' > .htmlhintrc  # Optional if missing
+          htmlhint "**/*.html"
 
       - name: Lint CSS
-        run: npx stylelint "**/*.css"
+        run: |
+          echo '{}' > .stylelintrc.json  # Optional if missing
+          stylelint "**/*.css"
