@@ -1,21 +1,28 @@
-name: Deploy to GitHub Pages - Production
+name: Deploy to Production
 
 on:
   push:
     branches:
-      - production
+      - main  # or 'production' if that's your final production branch
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install || true
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_PAT }}
-          publish_dir: ./src     # ✅ Change this if your index.html is elsewhere
-          publish_branch: gh-pages
+          publish_dir: ./src  # or ./dist if you’re building it
