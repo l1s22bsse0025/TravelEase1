@@ -3,14 +3,17 @@ name: Deploy to Staging
 on:
   push:
     branches:
-      - release/v1.0
+      - release/v1.0  # Or your staging trigger branch
+
+permissions:
+  contents: write   
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Deploy to GitHub Pages (Staging)
@@ -18,4 +21,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./src
-          publish_branch: staging  # or your staging branch/environment name
+          publish_branch: staging
