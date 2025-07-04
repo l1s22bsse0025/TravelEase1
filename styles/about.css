@@ -1,0 +1,36 @@
+/* General Typography */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* About Section */
+.about, .vision {
+  max-width: 900px;
+  margin: auto;
+}
+
+.about h2, .vision h2, .founders h2 {
+  color: #1e3a5f;
+  font-weight: bold;
+}
+
+/* Founders */
+.founders img {
+  border: 3px solid #0d6efd;
+  transition: transform 0.3s;
+}
+
+.founders img:hover {
+  transform: scale(1.05);
+}
+
+.founders h5 {
+  margin-top: 10px;
+  color: #1e3a5f;
+}
+
+/* Footer */
+footer {
+  background-color: #0d6efd;
+}
